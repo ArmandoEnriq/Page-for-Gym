@@ -7,8 +7,7 @@ const Footer = () => {
 
                 {/* Logos */}
                 <div className="flex space-x-8 opacity-50 hover:opacity-100 transition-opacity">
-                    <div className="h-12 w-32 bg-gray-800 flex items-center justify-center text-xs">CAPCOM LOGO</div>
-                    <div className="h-12 w-12 bg-gray-800 flex items-center justify-center text-xs">ESRB</div>
+                    <div className="h-12 w-32 bg-gray-800 flex items-center justify-center text-xs">StrongFit Studio</div>
                 </div>
 
                 {/* Links */}
@@ -21,8 +20,9 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <div className="text-center text-xs space-y-2">
-                    <p>&copy; CAPCOM CO., LTD. ALL RIGHTS RESERVED.</p>
-                    <p>RESIDENT EVIL is a trademark and/or registered trademark of CAPCOM CO., LTD. in the U.S. and/or other countries.</p>
+                    <p>&copy; StongFit CO., LTD. ALL RIGHTS RESERVED.</p>
+                    <p>Helaborado por Armando Enriquez para mostrar el uso de React y Tailwind.</p>
+                    <p>StrongFit Studio es una marca inventada no esta asociada con ninguna empresa.</p>
                 </div>
 
             </div>

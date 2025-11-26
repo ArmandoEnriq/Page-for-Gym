@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CharacterCarousel = () => {
+const SectionInstalaciones = () => {
     const characters = [
         {
             id: 1,
@@ -61,19 +61,16 @@ const CharacterCarousel = () => {
 
     return (
         <section className="relative py-20 px-4 overflow-hidden">
-            {/* Animated Background Gradient */}
             <div
                 className={`absolute inset-0 bg-gradient-to-br ${selectedCharacter.bgColor} transition-all duration-1000 ease-in-out`}
             />
 
-            {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0 opacity-30 bg-[length:60px_60px]" style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
                 }} />
             </div>
             <div className="container mx-auto max-w-7xl relative z-10">
-                {/* Section Header */}
                 <div className="text-center mb-12">
                     <h3 className="text-red-600 font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-4 font-oswald">
                         Experiencia StrongFit Studio
@@ -83,9 +80,7 @@ const CharacterCarousel = () => {
                     </h2>
                 </div>
 
-                {/* Main Display Area */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-                    {/* Character Image */}
                     <div className="relative">
                         <div
                             className={`relative aspect-[3/4] max-w-md mx-auto overflow-hidden transition-all duration-500 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
@@ -96,12 +91,10 @@ const CharacterCarousel = () => {
                                 alt={selectedCharacter.name}
                                 className="w-full h-full object-cover"
                             />
-                            {/* Image Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                         </div>
                     </div>
 
-                    {/* Character Info */}
                     <div
                         className={`space-y-6 transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-x-10' : 'opacity-100 translate-x-0'
                             }`}
@@ -118,7 +111,6 @@ const CharacterCarousel = () => {
                     </div>
                 </div>
 
-                {/* Character Thumbnails */}
                 <div className="flex justify-center gap-4 flex-wrap">
                     {characters.map((character) => (
                         <button
@@ -136,7 +128,6 @@ const CharacterCarousel = () => {
                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                             </div>
-                            {/* Active Indicator */}
                             {selectedCharacter.id === character.id && (
                                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-600 rounded-full" />
                             )}
@@ -148,4 +139,4 @@ const CharacterCarousel = () => {
     );
 };
 
-export default CharacterCarousel;
+export default SectionInstalaciones;

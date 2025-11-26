@@ -1,71 +1,66 @@
-import React from 'react';
 
 const PurchaseSection = () => {
     const editions = [
         {
             id: 1,
-            name: 'Edición Estándar',
-            price: '$59.99',
+            name: 'Edición Fit',
+            price: '$39',
             features: [
-                'Juego base completo',
-                'Modo campaña principal',
-                'Modo profesional',
-                'The Mercenaries'
+                'acceso a cualquier horario',
+                'nutricionista personalizado',
+                'casilleros para tus cosas',
+                'regadero y vestuarios'
             ],
-            image: 'https://via.placeholder.com/400x500/1a0a0a/ffffff?text=Standard+Edition',
+            image: '/src/assets/fit.png',
             popular: false
         },
         {
             id: 2,
-            name: 'Edición Deluxe',
-            price: '$69.99',
+            name: 'Plan Stándar',
+            price: '$59',
             features: [
-                'Todo lo de la Edición Estándar',
-                'Pase de temporada',
-                'Trajes exclusivos',
-                'Armas especiales',
-                'Artbook digital'
+                'Todo lo de la Edición Fit',
+                'Clases zumba y yoga',
+                'plan de alimentación personalizado',
+                'plan de entrenamiento mensual',
             ],
-            image: 'https://via.placeholder.com/400x500/2a0a0a/ffffff?text=Deluxe+Edition',
+            image: '/src/assets/standar.png',
             popular: true
         },
         {
             id: 3,
-            name: 'Edición Coleccionista',
-            price: '$199.99',
+            name: 'Plan StrongFit',
+            price: '$99',
             features: [
-                'Todo lo de la Edición Deluxe',
-                'Figura coleccionable de Leon',
-                'Steelbook exclusivo',
-                'Mapa del juego',
-                'Banda sonora original',
-                'Contenido físico premium'
+                'Todo lo de el Plan Stándar',
+                'Acompanamiento personalizado',
+                'zona de hidratación',
+                'eventos exclusivos',
+                'nutricionista 24/7',
+                'acceso a todas las sucursales'
             ],
-            image: 'https://via.placeholder.com/400x500/0a1a2a/ffffff?text=Collector+Edition',
+            image: '/src/assets/strogfit.png',
             popular: false
         }
     ];
 
     return (
         <section className="relative py-20 px-4 overflow-hidden">
-            {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-red-950/10 to-[#0a0a0a]" />
 
             <div className="container mx-auto max-w-7xl relative z-10">
-                {/* Section Header */}
                 <div className="text-center mb-16">
                     <h3 className="text-red-600 font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-4 font-oswald">
-                        Comprar
+                        PLANES
                     </h3>
                     <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter font-oswald mb-6">
-                        ELIGE TU EDICIÓN
+                        ELIGE TU PLAN
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        Selecciona la edición perfecta para tu experiencia de survival horror.
+                        Selecciona el plan perfecto para tu experiencia en nuestras instalaciones 
                     </p>
                 </div>
 
-                {/* Editions Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     {editions.map((edition) => (
                         <div
@@ -73,7 +68,6 @@ const PurchaseSection = () => {
                             className={`relative group ${edition.popular ? 'md:-translate-y-4' : ''
                                 }`}
                         >
-                            {/* Popular Badge */}
                             {edition.popular && (
                                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-6 py-2 uppercase text-xs font-bold tracking-wider font-oswald z-20">
                                     Más Popular
@@ -84,7 +78,6 @@ const PurchaseSection = () => {
                                     ? 'ring-4 ring-red-600 shadow-2xl shadow-red-600/20'
                                     : 'hover:ring-2 hover:ring-gray-700'
                                 }`}>
-                                {/* Edition Image */}
                                 <div className="aspect-[4/5] overflow-hidden">
                                     <img
                                         src={edition.image}
@@ -94,7 +87,6 @@ const PurchaseSection = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
                                 </div>
 
-                                {/* Edition Info */}
                                 <div className="p-6 space-y-4">
                                     <div className="text-center">
                                         <h3 className="text-2xl font-bold text-white mb-2 font-oswald">
@@ -105,7 +97,6 @@ const PurchaseSection = () => {
                                         </div>
                                     </div>
 
-                                    {/* Features List */}
                                     <ul className="space-y-2 mb-6">
                                         {edition.features.map((feature, index) => (
                                             <li key={index} className="flex items-start text-gray-300 text-sm">
@@ -117,12 +108,11 @@ const PurchaseSection = () => {
                                         ))}
                                     </ul>
 
-                                    {/* Purchase Button */}
                                     <button className={`w-full py-3 uppercase tracking-widest text-sm font-bold transition-all duration-300 clip-path-button font-oswald ${edition.popular
                                             ? 'bg-red-600 text-white hover:bg-red-700 border-2 border-red-600 hover:border-red-700'
                                             : 'bg-transparent text-white border-2 border-gray-600 hover:bg-white hover:text-black hover:border-white'
                                         }`}>
-                                        Comprar Ahora
+                                        INSCRIBETE YA!
                                     </button>
                                 </div>
                             </div>
@@ -130,13 +120,12 @@ const PurchaseSection = () => {
                     ))}
                 </div>
 
-                {/* Platform Icons */}
                 <div className="text-center">
                     <p className="text-gray-400 mb-4 uppercase text-sm tracking-wider font-oswald">
-                        Disponible en
+                        ACEPTAMOS
                     </p>
                     <div className="flex justify-center gap-6 flex-wrap">
-                        {['PlayStation', 'Xbox', 'Steam', 'Epic Games'].map((platform) => (
+                        {['Kueski', 'Mastercard', 'PayPal', 'MercadoPago', 'Tarjeta de Credito'].map((platform) => (
                             <div key={platform} className="px-6 py-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors">
                                 <span className="text-white font-bold font-oswald">{platform}</span>
                             </div>

@@ -60,15 +60,12 @@ const WeaponDecoration = () => {
         let opacity = 0;
 
         if (isActive) {
-            // Weapon is in its active zone
             translateX = 0;
             opacity = 1;
         } else if (isAboveRange) {
-            // Haven't scrolled to it yet
             translateX = weapon.side === 'left' ? -100 : 100;
             opacity = 0;
         } else if (isBelowRange) {
-            // Scrolled past it
             translateX = weapon.side === 'left' ? -100 : 100;
             opacity = 0;
         }
@@ -81,10 +78,9 @@ const WeaponDecoration = () => {
     };
 
     const getPositionStyle = (weapon) => {
-        // Calculate vertical position based on scroll range
         const range = weapon.scrollEnd - weapon.scrollStart;
         const middle = weapon.scrollStart + (range / 2);
-        const topPercent = (middle / 10000) * 100; // Assuming max scroll around 6000px
+        const topPercent = (middle / 10000) * 100; 
 
         return {
             top: `${Math.min(Math.max(topPercent, 10), 90)}%`,

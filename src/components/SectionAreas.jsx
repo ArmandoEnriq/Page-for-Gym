@@ -1,12 +1,11 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
-const ThemeSection = () => {
+const SectionAreas = () => {
     const [ref, isVisible] = useScrollAnimation();
 
     return (
         <section className="relative py-20 px-4 overflow-hidden bg-[#0a0a0a]">
-            {/* Background with parallax effect */}
             <div className="absolute inset-0 overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-fixed opacity-30"
@@ -32,7 +31,6 @@ const ThemeSection = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Theme Card 1 */}
                     <div className="group relative overflow-hidden">
                         <div className="aspect-video bg-gray-800 overflow-hidden">
                             <img
@@ -52,7 +50,6 @@ const ThemeSection = () => {
                         </div>
                     </div>
 
-                    {/* Theme Card 2 */}
                     <div className="group relative overflow-hidden">
                         <div className="aspect-video bg-gray-800 overflow-hidden">
                             <img
@@ -72,7 +69,6 @@ const ThemeSection = () => {
                         </div>
                     </div>
 
-                    {/* Theme Card 3 */}
                     <div className="group relative overflow-hidden">
                         <div className="aspect-video bg-gray-800 overflow-hidden">
                             <img
@@ -97,4 +93,4 @@ const ThemeSection = () => {
     );
 };
 
-export default ThemeSection;
+export default SectionAreas;
